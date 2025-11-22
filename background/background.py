@@ -14,7 +14,7 @@ def baixar_df(df: pd.DataFrame, formato: str, estilo_html: str):
     formato = formato.lower()
 
     if formato == "csv":
-        data = df.to_csv(index=False).encode("latin1")
+        data = df.to_csv(index=False).encode("utf-8")
         mime = "text/csv"
         nome_arquivo = "dados.csv"
 
@@ -26,7 +26,7 @@ def baixar_df(df: pd.DataFrame, formato: str, estilo_html: str):
     elif formato == "html":
         html_base = df.to_html(index=False)
         # Pega o html gerado pelo pandas e associa ao estilo css preparado
-        data = (estilo_html + html_base).encode("latin1")
+        data = (estilo_html + html_base).encode("utf-8")
         mime = "text/html"
         nome_arquivo = "dados.html"
 
@@ -43,6 +43,7 @@ def baixar_df(df: pd.DataFrame, formato: str, estilo_html: str):
         return
     # Botão para baixar no formato escolhido
     try:
+       
         st.download_button(
             label=f"📥 {formato.upper()}",
             data=data,
@@ -50,5 +51,6 @@ def baixar_df(df: pd.DataFrame, formato: str, estilo_html: str):
             mime=mime,
             use_container_width=True
         )
+
     except:
         st.error("Erro no Download do arquivo... Refaça a operação.")

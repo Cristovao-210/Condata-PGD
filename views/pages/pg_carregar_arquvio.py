@@ -20,8 +20,5 @@ def carregar_arquivos():
         if uploaded:
             st.session_state["raw_file"] = uploaded.read().decode("utf-8")
             st.success("Arquivo carregado com sucesso!")
+            return True
 
-            if st.button("Prosseguir ➜", type="primary"):
-                st.session_state.active_tab = "Validação"
-                st.rerun()
-            

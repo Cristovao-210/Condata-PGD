@@ -20,13 +20,8 @@ def validar_baixar_dados():
 
         df_html = df.to_html(index=False)
 
-        st.download_button(
-            "Baixar HTML",
-            df_html,
-            file_name="tabela.html",
-            mime="text/html"
-        )
+        return {'dados': df, 'dados_formatados': True}
 
-        if st.button("⬅ Voltar"):
-            st.session_state.active_tab = "Upload"
-            st.rerun()
+        # if st.button("⬅ Voltar"):
+        #     st.session_state.active_tab = "Upload"
+        #     st.rerun()
