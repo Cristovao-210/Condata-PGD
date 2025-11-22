@@ -1,0 +1,32 @@
+import streamlit as st
+import pandas as pd
+
+
+
+def validar_baixar_dados():
+    
+# =======================================
+# ABA: VALIDAÇÃO
+# =======================================
+    st.header("2. Validar Dados")
+    
+    if "raw_file" not in st.session_state:
+        st.warning("Nenhum arquivo carregado ainda.")
+    else:
+        lines = st.session_state["raw_file"].split("\n")
+        df = pd.DataFrame({"linhas": lines})
+
+        st.dataframe(df)
+
+        df_html = df.to_html(index=False)
+
+        st.download_button(
+            "Baixar HTML",
+            df_html,
+            file_name="tabela.html",
+            mime="text/html"
+        )
+
+        if st.button("⬅ Voltar"):
+            st.session_state.active_tab = "Upload"
+            st.rerun()
