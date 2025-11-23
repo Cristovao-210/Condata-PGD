@@ -3,6 +3,51 @@ import pandas as pd
 from io import BytesIO
 
 
+# ========================
+def carregar_arquivos_extrator():
+    
+    # Componente para carregar os arquivos
+    arquivos = st.file_uploader(
+        "Escolha exatamente 2 arquivos (.REF.gz e .TXT.gz)",
+        type=["gz"],
+        accept_multiple_files=True,
+        key="upload_arquivos"
+    )
+    # Ações de validação após o carregamento do arquivo
+    if arquivos:
+        # Validar quantidade
+        if len(arquivos) != 2:
+            st.error("❌ Você deve carregar **exatamente 2 arquivos**: um .REF.gz e um .TXT.gz.")
+        else:
+            # Identificar arquivos
+            arquivo_layout = None
+            arquivo_dados = None
+
+            for arquivo in arquivos:
+                nome = arquivo.name.upper()
+
+                if nome.endswith("REF.GZ"):
+                    arquivo_layout = arquivo
+                elif nome.endswith("TXT.GZ"):
+                    arquivo_dados = arquivo
+
+            # Verificar se ambos foram encontrados
+            if arquivo_layout is None or arquivo_dados is None:
+                st.error("""
+                ❌ Arquivos inválidos.  
+                Você deve enviar **exatamente 2 arquivos**:
+                - Um que termine com **REF.gz** (layout)  
+                - Um que termine com **TXT.gz** (dados)  
+                """)
+            else:
+                st.success("✔️ Arquivos carregados com sucesso!")
+                st.session_state["arquivo_layout"] = arquivo_layout
+                st.session_state["arquivo_dados"] = arquivo_dados
+                print(arquivo_dados.name,"\n",arquivo_layout.name) # Debug
+                return True
+    
+
+
 def reset_app():
     st.session_state.clear()
     st.cache_data.clear()
@@ -54,3 +99,46 @@ def baixar_df(df: pd.DataFrame, formato: str, estilo_html: str):
 
     except:
         st.error("Erro no Download do arquivo... Refaça a operação.")
+
+
+def buscar_emojis():
+    return {
+        "informatica": [
+            "💻", "🖥️", "🖱️", "🖨️", "⌨️", "🖲️",
+            "📱", "📲", "📟", "🕹️",
+            "🌐", "📡", "🛜", "🔌", "🔋",
+            "💾", "📀", "💿", "🧠", "🧮", "⚙️",
+            "🛠️", "🔧", "🔨", "🧰",
+            "🧑‍💻", "👨‍💻", "👩‍💻"
+        ],
+        "dados": [
+            "🗄️", "🗃️", "🗂️", "💽",
+            "📁", "📂", "📄", "📑",
+            "💾", "🔄", "♻️"
+        ],
+        "navegacao": [
+            "➡️", "⬅️", "⬆️", "⬇️",
+            "↗️", "↘️", "↙️", "↖️",
+            "🔀", "🔁", "🔄", "🔂",
+            "⏺️", "⏹️", "⏯️", "⏭️", "⏮️",
+            "📌", "📍",
+            "🔽", "🔼",
+            "▶️", "◀️",
+            "🔍", "🔎"
+        ],
+        "seguranca": [
+            "🔒", "🔓", "🔑", "🗝️", "🛡️"
+        ],
+        "infra": [
+            "🗄️", "📡", "🛰️", "☁️",
+            "🛠️", "🔧", "🔨", "⚙️", "🧰"
+        ],
+        "processamento": [
+            "⚙️", "🔁", "🔄", "🔂",
+            "🔗", "🧩", "🤖"
+        ],
+        "avisos": [
+            "⚠️", "❗", "❕", "❌", "⛔",
+            "🛑", "🐞", "🔍"
+        ]
+    }

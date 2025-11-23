@@ -2,23 +2,14 @@ import streamlit as st
 import pandas as pd
 
 
-
-def carregar_arquivos():
+def carregar_arquivos(funcao_carregar_arquivos):
     
-    # =======================================
     # ABA: UPLOAD
-    # =======================================
     if st.session_state.active_tab == "Upload":
-        st.header("1. Carregar Arquivo")
+        st.header("1. Carregar Arquivos")
 
-        uploaded = st.file_uploader(
-            "Escolha um arquivo .txt",
-            type=["txt"],
-            key="file_input"
-        )
-
-        if uploaded:
-            st.session_state["raw_file"] = uploaded.read().decode("utf-8")
-            st.success("Arquivo carregado com sucesso!")
+        # RECEBE POR PARÂMETRO A FUNÇÃO QUE CARREGA OS ARQUIVOS NA SESSÃO
+        carga_arquivos_efetuada = funcao_carregar_arquivos()
+        if carga_arquivos_efetuada:
             return True
-
+        

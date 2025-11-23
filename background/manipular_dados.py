@@ -2,7 +2,6 @@ import gzip
 import pandas as pd
 import streamlit as st
 
-
 # Gerar DataFrame com o conteúdo dos arquivos
 def carregar_linhas_para_df(caminho_arquivo, nome_coluna="linha", encoding="utf-8"):
     """
