@@ -1,7 +1,9 @@
+from data import carregar_dados
 from views.pages import navegacao, pg_carregar_arquvio, pg_validar_dados
 from views.style import estilos
-from background import background, carregar_dados, manipular_dados, relatorios
+from background import background, manipular_dados, relatorios
 import streamlit as st 
+
 
 # Iniciar navegacao
 aba_ativa = navegacao.barra_navegacao()
@@ -24,18 +26,34 @@ match aba_ativa:
         if dados:
             if dados['dados_carregados']:
                 try:
+                    # Descompatando e configurando arquivos do extrator
                     lista_colunas = manipular_dados.configurar_arquivos_extrator(dados["layout_extrator"], "layout")
                     df_dados = manipular_dados.configurar_arquivos_extrator(dados["dados_extrator"], "dados")
                     df_dados_EXTRATOR = manipular_dados.gerar_tabela_dados_extrator(lista_colunas=lista_colunas, df_dados=df_dados)
-                    df_planilha_polare = st.session_state["planilha_polare"]
-                    st.dataframe(df_planilha_polare) # debug
-                    navegacao.compontente_downoload_dados(background, df_dados_EXTRATOR, estilos.estilo_tabela_download())
+                    df_dados_EXTRATOR = carregar_dados.configurar_dados_arquivo_EXTRATOR(df_pgd_unb=df_dados_EXTRATOR)
+                   
+                    # carregar tabelas auxiliares
+                    df_uorgs_siape = carregar_dados.carregar_uorgs_siape(caminho_uorgs_siape="data/UORGS-SIAPE.csv")
+                    df_uorgs_SIORG = carregar_dados.carregar_uorgs_SIORG(caminho_uorgs_SIORG="data/UORGS-SIORG.csv")
+                    df_SIAPE_left_join_SIORG = carregar_dados.criar_left_join_SIAPE_SIPORG(df_uorgs_siape=df_uorgs_siape, df_uorgs_SIORG=df_uorgs_SIORG)
+                    
+                    # Tratar nome das uorgs
+                    df_pgd_final = carregar_dados.anexar_uorgs_tabela_PGD(df_pgd_unb=df_dados_EXTRATOR, df_SIAPE_left_join_SIORG=df_SIAPE_left_join_SIORG)
+                    
+                    # Tratar planilha do Polare
+                    df_planilha_polare = dados['dados_polare']
+                    df_polare_lista_servidores = carregar_dados.aplicar_filtros_planilha_POLARE(caminho_planilha_polare=df_planilha_polare)
+                    # Consolidar dados do SIAPE com tabela do POLARE
+                    df_pgd_polare = carregar_dados.conferir_cadastro_servidores_POLARE(df_pgd_final=df_pgd_final, df_polare_lista_servidores=df_polare_lista_servidores)
+                    # Exibir dados consolidadeos
+                    st.dataframe(df_pgd_polare)
+                    
+                    # Opções de download                    
+                    navegacao.compontente_downoload_dados(background, df_pgd_polare, estilos.estilo_tabela_download())
                     # navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)
                 except:
                     navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)
                     
-           
-        
     case "Relatórios":
         relatorios.gerar_relatorio()
 

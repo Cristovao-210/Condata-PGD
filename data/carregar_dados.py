@@ -1,7 +1,6 @@
-import streamlit as st
 import pandas as pd 
-import time
 
+#===========Funções auxiliares===============
 def retirar_espacos_colunas(df):
   for col in df[list(df)]:
     df[col] = df[col].str.strip()
@@ -11,6 +10,11 @@ def converter_colunas_str(df):
 
 def retirar_codigo_orgao_coluna(txt: str):
   return str(int(str(txt[5:])))
+
+def retirar_zero_a_esquerda(txt: str):
+    return str(int(str(txt)))
+    
+#=============================================
 
 def carregar_uorgs_siape(caminho_uorgs_siape):
     # Carregando dados das UORGS do SIAPE
@@ -106,9 +110,20 @@ def anexar_uorgs_tabela_PGD(df_pgd_unb, df_SIAPE_left_join_SIORG):
     df_pgd_final = df_pgd_left_join[colunas_df_pgd_final].sort_values('nome_servidor')
     return df_pgd_final
 
+def configurar_dados_arquivo_EXTRATOR(df_pgd_unb):#caminho_pgd_unb,
+    # Carregando dados do PGD retirados do Extrator (HOD)
+    df_pgd_unb = converter_colunas_str(df_pgd_unb)
+    retirar_espacos_colunas(df_pgd_unb)
+    df_pgd_unb["IT-CO-UORG-LOTACAO-SERVIDOR"] = df_pgd_unb["IT-CO-UORG-LOTACAO-SERVIDOR"].apply(lambda x: retirar_zero_a_esquerda(str(x)))
+    df_pgd_unb["IT-CO-TIPO-PGD"] = df_pgd_unb["IT-CO-TIPO-PGD"].apply(lambda x: retirar_zero_a_esquerda(str(x)))
+    df_pgd_unb = df_pgd_unb.rename(columns={"IT-CO-UORG-LOTACAO-SERVIDOR": "codigo_uorg_siape"})
+    return df_pgd_unb
+
+# Filtros Polare==========================================================================
+
 def aplicar_filtros_planilha_POLARE(caminho_planilha_polare):
     # Carregando os dados da planilha
-    df_polare = pd.read_excel(caminho_planilha_polare)
+    df_polare = caminho_planilha_polare
     df_polare = df_polare.astype(str)
     retirar_espacos_colunas(df_polare)
     # filtros a serem utilizados
