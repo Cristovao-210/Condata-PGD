@@ -121,3 +121,11 @@ def aplicar_filtros_planilha_POLARE(caminho_planilha_polare):
     # DataFrame filtrado
     df_polare_lista_servidores =  df_polare['nome_servidor'][filtro_ano_referencia & filtro_coluna_ativo & filtro_coluna_situacao].drop_duplicates()
     return df_polare_lista_servidores
+
+
+def conferir_cadastro_servidores_POLARE(df_pgd_final, df_polare_lista_servidores):
+    # Criando coluna para saber se está cadastrado no Sistema Polare
+    df_pgd_final['cadastrado_no_polare'] = df_pgd_final['nome_servidor'].apply(lambda x: x.strip() in list(df_polare_lista_servidores)).map({True: "SIM", False: "NAO"})
+    # Resetando o indice do DataFrame
+    df_pgd_polare = df_pgd_final.reset_index(drop=True)
+    return df_pgd_polare
