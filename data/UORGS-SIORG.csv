@@ -1,0 +1,368 @@
+codigo;nome_unidade;sigla_unidade;unidade_macro
+470;Fundação Universidade de Brasília;UNB;UNB
+201272;Arquivo Central;ACE;ACE
+241104;Coordenação de Arquivo Permanente;ACE/COAP;ACE
+201273;Coordenação de Gestão de Documentos;ACE/COGED;ACE
+241103;Coordenação de Protocolo;ACE/COP;ACE
+241174;Apoio Administrativo;ACE/APOIO;ACE
+241040;Assessoria de Acompanhamento e Mediação de Conduta;AAMC;AAMC
+24236;Auditoria Interna da UnB;AUD;AUD
+297615;Auditoria Adjunta;AUD/ADJ;AUD
+16201;Biblioteca Central;BCE;BCE
+310384;Direção-Adjunta;BCE/ADJ;BCE
+24854;Coordenadoria de Administração e Orçamento;BCE/ADM;BCE
+24855;Setor de Administração Predial e Patrimonial;BCE/ADM/PRED;BCE
+241148;Setor de Compras;BCE/ADM/COM;BCE
+24853;Coordenadoria de Atendimento aos Usuários;BCE/AUS;BCE
+24860;Setor de Atendimento Noturno;BCE/AUS/NOT;BCE
+241171;Setor de Empréstimo;BCE/AUS/EMP;BCE
+201280;Setor de Recolocação;BCE/AUS/REC;BCE
+24866;Setor de Referência;BCE/AUS/REF;BCE
+24863;Coordenadoria de Formação e Desenvolvimento de Acervos;BCE/FDA;BCE
+24859;Setor de Coleções Especiais;BCE/FDA/COLESP;BCE
+241169;Setor de Conservação e Restauração;BCE/FDA/RES;BCE
+241170;Setor de Organização da Informação;BCE/FDA/SOI;BCE
+24861;Setor de Seleção e Aquisição;BCE/FDA/SEL;BCE
+241191;Coordenadoria de Gestão da Informação Digital;BCE/GID;BCE
+257389;Coordenadoria de Planejamento e Comunicação;BCE/PCOM;BCE
+24257;Gabinete da Reitoria;GRE;GRE
+245710;Coordenação de Cerimonial;GRE/CERI;GRE
+24252;Secretaria de Comunicação;GRE/SECOM;GRE
+293187;Coordenação de Comunicação Institucional;GRE/SECOM/CCI;GRE
+293186;Coordenação de Comunicação Visual;GRE/SECOM/CCV;GRE
+293185;Coordenação de Produção de Conteúdo;GRE/SECOM/CPC;GRE
+242850;Secretaria dos Órgãos Colegiados;GRE/SOC;GRE
+298112;Assessoria Administrativa;GRE/ADM;GRE
+298114;Assessoria de Análise Processual;GRE/AAP;GRE
+298111;Assessoria de Comunicação Institucional;GRE/ASCOM;GRE
+298113;Assessoria de Parcerias e Acordos de Cooperação;GRE/APAC;GRE
+24264;Secretaria de Administração Acadêmica;GRE/SAA;GRE
+43326;Coordenação de Cursos, Currículos e Oferta (graduação e pós-graduação);GRE/SAA/CCC;GRE
+43322;Coordenação de Graduação;GRE/SAA/CGR;GRE
+43321;Coordenação de Orientação e Supervisão das Unidades Avançadas;GRE/SAA/COS;GRE
+43323;Coordenação de Pós-Graduação;GRE/SAA/CRPG;GRE
+43324;Coordenação de Registro e Emissão de Diplomas e Certificados da UnB;GRE/SAA/CRDC;GRE
+296530;Assessoria da SAA;GRE/SAA/ASS;GRE
+296531;Arquivo da SAA;GRE/SAA/ASS/ARQ;GRE
+24255;Secretaria de Assuntos Internacionais;GRE/INT;GRE
+240950;Secretaria de Direitos Humanos;GRE/SDH;GRE
+240959;Coordenação LGBTQIA+;GRE/SDH/CODSEX;GRE
+240953;Coordenação Negra;GRE/SDH/COQUEN;GRE
+240956;Coordenação da Questão Indígena;GRE/SDH/COQUEI;GRE
+240961;Coordenação das Mulheres;GRE/SDH/CODIM;GRE
+24727;Rádio e Televisão Universitárias;GRE/UnBTV;GRE
+273778;Coordenação de Pós-Produção da UnBTV;GRE/UnBTV/CPG;GRE
+201274;Ouvidoria;GRE/OUV;GRE
+256884;Serviço de Informação ao Cidadão;GRE/OUV/SIC;GRE
+24258;Prefeitura da UnB;PRC;PRC
+43185;Diretoria de Administração e Estratégia;PRC/DIRAE;PRC
+89008;Coordenação Geral de Administração;PRC/DIRAE/COAD;PRC
+298068;Gerência de Planejamento e Gestão de Riscos;PRC/DIRAE/COAD/GPG;PRC
+262192;Coordenação de Conservação e Limpeza;PRC/DIRAE/COCL;PRC
+257745;Coordenação de Gestão dos Espaços Comuns;PRC/DIRAE/COGE;PRC
+43198;Gerência dos Espaços de Uso Comum;PRC/DIRAE/COGE/GEC;PRC
+298070;Gerência dos Núcleos de Administração Predial;PRC/DIRAE/COGE/GNP;PRC
+257741;Coordenação de Licitações;PRC/DIRAE/COOL;PRC
+89013;Coordenação de Paisagismo e Dedetização;PRC/DIRAE/COPS;PRC
+298069;Gerência de Controle e Produção;PRC/DIRAE/COPS/GCP;PRC
+24728;Diretoria de Manutenção, Reparos e Transportes;PRC/DIMAT;PRC
+43199;Coordenação de Gestão de Transportes;PRC/DIMAT/COTR;PRC
+257762;Gerência de Manutenção de Veículos;PRC/DIMAT/COTR/GMV;PRC
+257749;Coordenação Executiva e Administrativa;PRC/DIMAT/COEA;PRC
+257759;Coordenação de Manutenção Básica;PRC/DIMAT/COMB;PRC
+298067;Gerência de Suporte;PRC/DIMAT/COMB/GSU;PRC
+257757;Coordenação de Manutenção de Equipamentos;PRC/DIMAT/CMEQ;PRC
+298071;Gerência de Produção;PRC/DIMAT/CMEQ/GPR;PRC
+257768;Diretoria de Segurança;PRC/DISEG;PRC
+257770;Coordenação de Segurança;PRC/DISEG/COSE;PRC
+257769;Gerência de Apoio Administrativo;PRC/DISEG/COSE/GAA;PRC
+241053;Secretaria de  Infraestrutura;INFRA;INFRA
+241058;Diretoria de Obras;INFRA/DOB;INFRA
+298496;Gerência de Fiscalização;INFRA/DOB/GFis;INFRA
+241057;Diretoria do Centro de Planejamento Oscar Niemeyer;INFRA/CEPLAN;INFRA
+298495;Gerência de Projetos;INFRA/CEPLAN/GProj;INFRA
+43187;Diretoria de Manutenção Predial;INFRA/DIMAP;INFRA
+257764;Coordenação de Adequações e Reformas;INFRA/DIMAP/CAR;INFRA
+257766;Coordenação de Manutenção Predial;INFRA/DIMAP/CMP;INFRA
+257767;Coordenação de Manutenção e Instalações;INFRA/DIMAP/CMI;INFRA
+298491;Coordenação Administrativa;INFRA/CAdm;INFRA
+245692;Secretaria de Meio Ambiente;SeMA;SeMA
+24256;Secretaria de Patrimônio Imobiliário;SPI;SPI
+415569;Assessoria Patrimonial e de Apoio Administrativo;APA;APA
+414830;Diretoria de Gestão de Patrimônio Imobiliário;DIGEP;DIGEP
+257431;Coordenação de Manutenção Predial;SPI/CMP;SPI
+68511;Coordenação Condominial;SPI/CAC;SPI
+43376;Coordenação de Administração de Imóveis;SPI/CAI;SPI
+414849;Diretoria de Projetos Estratégicos;DIPE;DIPE
+257440;Coordenação de Mercado Imobiliário;SPI/CMI;SPI
+115820;Centro UnB Cerrado;CER;CER
+24729;Centro de Estudos Avançados e Multidisciplinares;CEAM;CEAM
+43254;Centro de Excelência em Turismo;CET;CET
+24234;Decanato de Administração;DAF;DAF
+241087;Assessoria do DAF;DAF/ASS;DAF
+43291;Diretoria de Análise e Conformidade Processual;DAF/DACP;DAF
+280129;Coordenadoria de Controle Processual;DAF/DACP/CCP;DAF
+43299;Coordenadoria de Controle de Viagens;DAF/DACP/CCV;DAF
+24277;Diretoria de Compras;DAF/DCO;DAF
+43292;Coordenadoria de Compras;DAF/DCO/CCO;DAF
+241036;Divisão de Acompanhamento das Aquisições e Registro de Preço;DAF/DCO/CCO/DARP;DAF
+241038;Divisão de Apuração de Sanção a Fornecedores;DAF/DCO/CCO/DASF;DAF
+241045;Coordenadoria de Análise de Instrução Processual;DAF/DCO/CAIP;DAF
+241041;Coordenadoria de Licitações;DAF/DCO/COL;DAF
+24278;Diretoria de Contabilidade e Finanças;DAF/DCF;DAF
+43297;Coordenadoria de Empenho;DAF/DCF/CEmp;DAF
+43298;Coordenadoria de Execução Financeira;DAF/DCF/CEF;DAF
+43295;Coordenadoria de Prestação de Contas de Contratos e Instrumentos Correlatos;DAF/DCF/CPC;DAF
+43300;Coordenadoria de Transparência, Gestão Financeira e Custos;DAF/DCF/CTGC;DAF
+257675;Coordenadoria de Instrução Contábil e Fiscal;DAF/DCF/CIC;DAF
+241009;Coordenadoria de Liquidação da Despesa;DAF/DCF/CLD;DAF
+241029;Diretoria de Contratos Administrativos;DAF/DCA;DAF
+241096;Coordenadoria de Contratos Especiais;DAF/DCA/CES;DAF
+241031;Coordenadoria de Contratos de Gestão;DAF/DCA/CGT;DAF
+241084;Coordenadoria de Contratos de Serviços Sob Demanda;DAF/DCA/CSD;DAF
+241076;Coordenadoria de Contratos de Serviços por Postos de Trabalho com Dedicação Exclusiva;DAF/DCA/CDE;DAF
+257709;Divisão de Contratação de Serviços por Postos de Trabalho com Dedicação Exclusiva;DAF/DCA/CDE/DCDE;DAF
+257711;Divisão de Gestão e Controle da Fiscalização de Serviços por Postos de Trabalho com Dedicação Exclusiva;DAF/DCA/CDE/DGDE;DAF
+257715;Divisão de Penalização em Contratações de Serviços por Postos de Trabalho com Dedicação Exclusiva;DAF/DCA/CDE/DPDE;DAF
+241078;Diretoria de Gestão de Materiais;DAF/DGM;DAF
+43290;Coordenadoria de Patrimônio;DAF/DGM/PAT;DAF
+318937;Divisão de Recolhimento, Redistribuição e Mudança;DAF/DGM/PAT/DRM;DAF
+43294;Coordenadoria do Almoxarifado Central;DAF/DGM/ALM;DAF
+43293;Diretoria de Importação e Exportação;DAF/DIMEX;DAF
+241056;Coordenadoria de Comércio Exterior;DAF/DIMEX/CCE;DAF
+241054;Divisão de Despacho Aduaneiro;DAF/DIMEX/CCE/DDA;DAF
+287227;Secretaria Administrativa do DAF;DAF/SEC;DAF
+24233;Decanato de Assuntos Comunitários;DAC;DAC
+43256;Diretoria de Acessibilidade;DAC/DACES;DAC
+68273;Diretoria de Atenção à Saude da Comunidade Universitária;DAC/DASU;DAC
+257266;Coordenação de Articulação da Comunidade Educativa;DAC/DASU/CoEduca;DAC
+257271;Coordenação de Articulação de Redes para Prevenção e Promoção da Saúde;DAC/DASU/CoRedes;DAC
+240998;Coordenação de Atenção Psicossocial;DAC/DASU/CoAP;DAC
+269155;Coordenação de Atenção e Vigilância em Saúde;DAC/DASU/CoAVS;DAC
+24268;Diretoria de Desenvolvimento Social;DAC/DDS;DAC
+43310;Coordenação Administrativa;DAC/DDS/COAD;DAC
+43312;Coordenação Geral de Moradia Estudantil;DAC/DDS/COGEM;DAC
+43311;Coordenação de Assistência Estudantil;DAC/DDS/COAE;DAC
+24269;Diretoria de Esporte e Atividades Comunitárias;DAC/DEAC;DAC
+43317;Coordenação da Arte e Cultura Comunitárias;DAC/DEAC/COAC;DAC
+43316;Coordenação de Esporte e Lazer;DAC/DEAC/CEL;DAC
+257262;Coordenação de Organizações Comunitárias;DAC/DEAC/COC;DAC
+201271;Diretoria do Restaurante Universitário;DAC/DRU;DAC
+43381;Coordenação de Gestão Administrativa;DAC/DRU/CGA;DAC
+43380;Coordenação de Promoção a Alimentação;DAC/DRU/CPA;DAC
+24230;Decanato de Ensino de Graduação;DEG;DEG
+241012;Diretoria Técnica de Graduação;DEG/DTG;DEG
+318837;Coordenação Executiva do Decanato de Ensino de Graduação;DEG/DTG/CoEx;DEG
+308248;Coordenação Pedagógica;DEG/DTG/CP;DEG
+241015;Coordenação de Acompanhamento do Ensino de Graduação;DEG/DTG/CAEG;DEG
+257491;Coordenação de Gestão de Atividades de Graduação;DEG/DTG/CGAT;DEG
+71634;Diretoria de Acompanhamento e Integração Acadêmica;DEG/DAIA;DEG
+71635;Coordenação de Estágios da Graduação;DEG/DAIA/CESG;DEG
+257515;Coordenação de Acompanhamento Acadêmico;DEG/DAIA/CAA;DEG
+240984;Diretoria de Inovação no Ensino de Graduação;DEG/DIEG;DEG
+271790;Coordenação de Processos Seletivos;DEG/DIEG/CPS;DEG
+240990;Coordenação de Projetos e Eventos Institucionais;DEG/DIEG/CPE;DEG
+271772;Diretoria de Planejamento e Acompanhamento Pedagógico das Licenciaturas;DEG/DAPLI;DEG
+241016;Coordenação de Integração das Licenciaturas;DEG/DAPLI/CIL;DEG
+271791;Coordenação de Projetos Especiais nas Licenciaturas;DEG/DAPLI/CPLic;DEG
+24232;Decanato de Extensão;DEX;DEX
+240981;Secretaria Administrativa do DEX;DEX/SEC;DEX
+24265;Diretoria Técnica de Extensão;DEX/DTE;DEX
+43327;Coordenação de Análise Técnica e Acompanhamento de Ações de Extensão;DEX/DTE/CAPEX;DEX
+43329;Coordenação de Eventos, Planejamento e Avaliação da Extensão;DEX/DTE/CEPAE;DEX
+24267;Diretoria de Desenvolvimento e Integração Social;DEX/DDIS;DEX
+34834;Coordenação Estratégica de Ações e Publicações de Extensão;DEX/DDIS/CEAPE;DEX
+38730;Coordenação Estratégica de Formação e Articulação Social;DEX/DDIS/CEFAS;DEX
+24266;Diretoria de Difusão Cultural;DEX/DDC;DEX
+37517;Coordenação das Casas Universitárias de Cultura;DEX/DDC/CUC;DEX
+117978;Decanato de Gestão de Pessoas;DGP;DGP
+240963;Assessoria do Decanato;DGP/ASCOL;DGP
+240971;Coordenadoria de Arquivos Funcionais;DGP/ASCOL/COARQ;DGP
+240968;Coordenadoria de Atendimento;DGP/ASCOL/COATE;DGP
+317546;Divisão de Atendimento HUB;DGP/ASCOL/COAT/HUB;DGP
+240970;Coordenadoria de Controle Interno;DGP/ASCOL/CI;DGP
+240973;Coordenadoria de Orientação a Legislação;DGP/ASCOL/COLEP;DGP
+240944;Diretoria de Administração de Pessoas;DGP/DAP;DGP
+240977;Coordenadoria de Aposentadoria e Pensão;DGP/DAP/COAPO;DGP
+240978;Coordenadoria de Operações Financeiras;DGP/DAP/COFIN;DGP
+240976;Coordenadoria de Registro e Controle Funcional;DGP/DAP/COREF;DGP
+240946;Diretoria de Capacitação, Desenvolvimento e Educação;DGP/DCADE;DGP
+240983;Coordenadoria de Acompanhamento da Carreira;DGP/DCADE/CAC;DGP
+240980;Coordenadoria de Capacitação;DGP/DCADE/PROCAP;DGP
+240979;Coordenadoria de Estudos em Gestão de Pessoas;DGP/DCADE/CODE;DGP
+240982;Coordenadoria de Gestão de Desempenho;DGP/DCADE/COGED;DGP
+240951;Diretoria de Provimento, Acompanhamento e Movimentação;DGP/DPAM;DGP
+240993;Coordenadoria de Acompanhamento e Movimentação;DGP/DPAM/CAM;DGP
+240995;Coordenadoria de Estágio;DGP/DPAM/COEST;DGP
+240991;Coordenadoria de Planejamento e Alocação de Pessoal;DGP/DPAM/CPAP;DGP
+240988;Coordenadoria de Provimento;DGP/DPAM/CPROV;DGP
+240954;Diretoria de Saúde, Segurança e Qualidade de Vida no Trabalho;DGP/DSQVT;DGP
+241001;Coordenadoria de Engenharia e Segurança no Trabalho;DGP/DSQVT/CEST;DGP
+241000;Coordenadoria de Perícia Oficial em Saúde;DGP/DSQVT/CPOS;DGP
+241003;Coordenadoria de Saúde Ocupacional;DGP/DSQVT/CSO;DGP
+241150;Gabinete do Decanato;DGP/GAB;DGP
+240939;Decanato de Pesquisa e Inovação;DPI;DPI
+339963;Assessoria;DPI/ASS;DPI
+240960;Diretoria de Apoio a Projetos Acadêmicos;DPI/DPA;DPI
+257458;Coordenação de Apoio a Projetos Acadêmicos;DPI/DPA/CProj;DPI
+43331;Diretoria de Pesquisa;DPI/DIRPE;DPI
+339663;Coordenação de Projetos de Pesquisa;DPI/DIRPE/CPPq;DPI
+257465;Coordenação de Infraestrutura e Grupos de Pesquisa;DPI/DIRPE/CIGP;DPI
+24886;Diretoria do Centro de Apoio ao Desenvolvimento Tecnológico;DPI/CDT;DPI
+339703;Coordenação de Apoio às Atividades em Tecnologia e Inovação;DPI/CDT/CATI;DPI
+339783;Coordenação de Empreendedorismo e Desenvolvimento Empresarial e Social;DPI/CDT/CEDES;DPI
+339763;Coordenação de Inovação e Transferência de Tecnologia;DPI/CDT/CITT;DPI
+339923;Secretaria Administrativa;DPI/CDT/SEC-ADM;DPI
+339603;Secretaria Administrativa;DPI/SEC-ADM;DPI
+117979;Decanato de Planejamento, Orçamento e Avaliação Institucional;DPO;DPO
+240966;Assessoria;DPO/ASS;DPO
+240941;Diretoria de Avaliação e Estatísticas Institucionais;DPO/DAI;DPO
+240945;Coordenadoria de Avaliação Institucional;DPO/DAI/CAI;DPO
+240947;Coordenadoria de Estatísticas Institucionais;DPO/DAI/CEI;DPO
+24270;Diretoria de Orçamento;DPO/DOR;DPO
+240948;Coordenadoria de Acompanhamento Orçamentário;DPO/DOR/CAOR;DPO
+240952;Coordenadoria de Programação Orçamentária;DPO/DOR/CPOR;DPO
+240943;Diretoria de Planejamento;DPO/DPL;DPO
+240955;Coordenadoria de Apoio à Integridade e Gestão de Riscos;DPO/DPL/CAIGR;DPO
+240957;Coordenadoria de Planejamento e Apoio à Governança;DPO/DPL/CPAG;DPO
+240940;Diretoria de Processos Organizacionais;DPO/DPR;DPO
+240958;Coordenadoria de Estruturação Organizacional;DPO/DPR/CES;DPO
+240962;Coordenadoria de Gerenciamento de Processos;DPO/DPR/CGP;DPO
+240967;Secretaria do Decanato;DPO/SEC;DPO
+24231;Decanato de Pós-Graduação;DPG;DPG
+38729;Diretoria de Fomento à Iniciação Científica;DPG/DIRIC;DPG
+34603;Diretoria de Pós-Graduação;DPG/DIRPG;DPG
+257530;Coordenação de Cursos Lato Sensu;DPG/DIRPG/CCLS;DPG
+257514;Coordenação de Cursos Stricto Sensu;DPG/DIRPG/CCSS;DPG
+257542;Coordenação de Fomento e Internacionalização;DPG/DIRPG/CFPG;DPG
+299998;Assessoria de Planejamento e Acompanhamento Financeiro;DPG/APAF;DPG
+299999;Secretaria Executiva do DPG;DPG/SEC;DPG
+24235;Procuradoria Federal Junto a UnB;PF;PF
+43077;Coordenação de Assuntos Estratégicos e Prioritários;PF/CAEP;PF
+69148;Coordenação do Consultivo;PF/CCONS;PF
+68713;Coordenação do Contencioso;PF/CCONT;PF
+241086;Secretaria Administrativa;PF/SEC;PF
+24892;Centro de Desenvolvimento Sustentável;CDS;CDS
+24887;Centro de Educação a Distância e Tecnologias Educacionais da Universidade de Brasília;CEAD;CEAD
+352751;Assessoria de Inovação, Pesquisa e Projetos;CEAD/ASS;CEAD
+244831;Coordenação Acadêmica;CEAD / CAC;CEAD
+419489;Coordenação Administrativa;CEAD / CAD;CEAD
+16203;Editora Universidade de Brasília;EDU;EDU
+388929;Coordenação Administrativa;EDU/CoADM;EDU
+297529;Coordenação Comercial;EDU/COM;EDU
+297531;Coordenação Financeira;EDU/FIN;EDU
+297535;Coordenação de Almoxarifado;EDU/ALMOX;EDU
+297534;Coordenação de Produção Editorial;EDU/PRD;EDU
+16204;Fazenda Água Limpa;FAL;FAL
+16205;Hospital Universitário de Brasília;HUB;HUB
+241043;Parque Científico e Tecnológico da UnB;PCTec;PCTec
+297243;Coordenação de Ciência, Tecnologia e Inovação;PCTec/CCTI;PCTec
+297242;Coordenação de Eventos, Prospecção e Parcerias;PCTec/CEPP;PCTec
+16202;Secretaria de Tecnologia da Informação;STI;STI
+257623;Coordenadoria de Assessoramento e Apoio à Governança de TIC;STI/DIR/CATI;STI
+257589;Coordenadoria de Gestão e Planejamento;STI/CGESP;STI
+257625;Divisão de Aquisições e Contratações de TIC;STI/CGESP/DACTIC;STI
+257618;Núcleo de Administração e Capacitação;STI/CGESP/ADMCAP;STI
+257596;Diretoria de Operações e Serviços;STI/DOS;STI
+257634;Coordenadoria de Data Center;STI/DOS/CDC;STI
+257656;Coordenadoria de Redes e Infraestrutura;STI/DOS/CRI;STI
+257649;Coordenadoria de Segurança da Informação;STI/DOS/CSI;STI
+257660;Coordenadoria de Serviços Especializados;STI/DOS/CSE;STI
+257631;Divisão de Atendimento ao Usuário;STI/DOS/DAU;STI
+257591;Diretoria de Sistemas da Informação;STI/DSI;STI
+257671;Coordenadoria de Estratégia de Dados;STI/DSI/CED;STI
+257678;Coordenadoria de Sistemas Acadêmicos;STI/DSI/ACAD;STI
+257681;Coordenadoria de Sistemas Administrativos;STI/DSI/ADM;STI
+257666;Coordenadoria de Sites Corporativos;STI/DSI/SITES;STI
+257673;Coordenadoria de Sustentação e Arquitetura de Sistemas;STI/DSI/ARQ;STI
+93614;Campus Faculdade de Planaltina;FUP;FUP
+93612;Campus UnB Ceilândia: Faculdade de Ciências e Tecnologias em Saúde;FCTS;FCTS
+93613;Campus UnB Gama: Faculdade de Ciências e Tecnologias em Engenharia;FCTE;FCTE
+282027;Coordenação de Laboratórios e de Núcleos de Graduação;FGA/CLNG;FGA
+282026;Divisão de Apoio a Direção da Faculdade do Gama;FGA/DIVGAMA;FGA
+16199;Faculdade de Administração, Contabilidade, Economia e Gestão de Políticas Públicas;FACE;FACE
+35393;Departamento Gestão de Políticas Públicas;FACE/GPP;FACE
+24385;Departamento de Administração;FACE/ADM;FACE
+256406;Coordenação do Programa de Pós-Graduação em Administração;FACE/ADM/PPGA;FACE
+24387;Departamento de Ciências Contábeis e Atuariais;FACE/CCA;FACE
+24313;Departamento de Economia;FACE/ECO;FACE
+24473;Faculdade de Agronomia e Medicina Veterinária;FAV;FAV
+257354;Hospital Veterinário;FAV/HVET;FAV
+16189;Faculdade de Arquitetura e Urbanismo;FAU;FAU
+24376;Departamento de Projeto, Expressão e Representação em Arquitetura e Urbanismo;FAU/PRO;FAU
+24377;Departamento de Tecnologia em Arquitetura e Urbanismo;FAU/TEC;FAU
+24378;Departamento de Teoria e História em Arquitetura e Urbanismo;FAU/THAU;FAU
+24386;Faculdade de Ciência da Informação;FCI;FCI
+16193;Faculdade de Ciências da Saúde;FS;FS
+43242;Departamento de Enfermagem;FS/ENF;FS
+241147;Departamento de Farmácia;FS/FAR;FS
+43241;Departamento de Nutrição;FS/NUT;FS
+43243;Departamento de Odontologia;FS/ODT;FS
+43244;Departamento de Saúde Coletiva;FS/DSC;FS
+16197;Faculdade de Comunicação;FAC;FAC
+256822;Departamento de Comunicação;FAC/COM;FAC
+24384;Departamento de Audiovisuais e Publicidade;FAC/DAP;FAC
+24383;Departamento de Jornalismo;FAC/JOR;FAC
+24554;Faculdade de Direito;FD;FD
+16198;Faculdade de Educação;FE;FE
+24381;Departamento de Métodos e Técnicas;FE/MTC;FE
+24382;Departamento de Políticas Públicas e Gestão da Educação;FE/PGE;FE
+24380;Departamento de Teoria e Fundamentos;FE/TEF;FE
+24556;Faculdade de Educação Física;FEF;FEF
+256950;Centro Olímpico;FEF/CO;FEF
+61623;Faculdade de Medicina;FM;FM
+16200;Faculdade de Tecnologia;FT;FT
+256212;Departamento de Engenharia de Produção;FT/EPR;FT
+24474;Departamento de Engenharia Civil;FT/ENC;FT
+24475;Departamento de Engenharia Elétrica;FT/ENE;FT
+24477;Departamento de Engenharia Florestal;FT/EFL;FT
+24476;Departamento de Engenharia Mecânica;FT/ENM;FT
+16110;Instituto de Artes;IdA;IdA
+16115;Departamento de Artes Cênicas;IdA/CEN;IdA
+16113;Departamento de Artes Visuais;IdA/VIS;IdA
+241194;Departamento de Design;IdA/DIN;IdA
+16116;Departamento de Música;IdA/MUS;IdA
+24551;Instituto de Ciência Política;IPOL;IPOL
+16169;Instituto de Ciências Biológicas;IB;IB
+24283;Departamento de Biologia Celular;IB/CEL;IB
+24292;Departamento de Botânica;IB/BOT;IB
+24287;Departamento de Ciências Fisiológicas;IB/CFS;IB
+24290;Departamento de Ecologia;IB/ECL;IB
+24291;Departamento de Fitopatologia;IB/FIT;IB
+24288;Departamento de Genética e Morfologia;IB/GEM;IB
+24294;Departamento de Zoologia;IB/ZOO;IB
+16173;Instituto de Ciências Exatas;IE;IE
+24305;Departamento de Ciências da Computação;IE/CIC;IE
+24303;Departamento de Estatística;IE/EST;IE
+24298;Departamento de Matemática;IE/MAT;IE
+16174;Instituto de Ciências Humanas;ICH;ICH
+24331;Departamento de Filosofia;ICH/FIL;ICH
+24332;Departamento de Geografia;ICH/GEA;ICH
+24333;Departamento de História;ICH/HIS;ICH
+24330;Departamento de Serviço Social;ICH/SER;ICH
+24510;Instituto de Ciências Sociais;ICS;ICS
+24548;Departamento de Antropologia;ICS/DAN;ICS
+24549;Departamento de Estudos Latino-Americanos;ICS/ELA;ICS
+24547;Departamento de Sociologia;ICS/SOL;ICS
+67710;Instituto de Física;IF;IF
+319481;Centro Internacional de Física;IF/CIF;IF
+16175;Instituto de Geociências;IG;IG
+24336;Observatório Sismológico;IG/SIS;IG
+16179;Instituto de Letras;IL;IL
+421951;Assessoria de Comunicação do Instituto de Letras;ASCIL;ASCIL
+24337;Departamento de Linguística, Línguas Clássicas e Vernáculas;IL/LIP;IL
+24363;Departamento de Línguas Estrangeiras e Tradução;IL/LET;IL
+24359;Departamento de Teoria Literária e Literaturas;IL/TEL;IL
+16182;Instituto de Psicologia;IP;IP
+43252;Centro de Atendimento e Estudos Psicológicos;IP/CAEP;IP
+24368;Departamento de Processos Psicológicos Básicos;IP/PPB;IP
+24370;Departamento de Psicologia Clínica;IP/PCL;IP
+24369;Departamento de Psicologia Escolar e do Desenvolvimento;IP/PED;IP
+24371;Departamento de Psicologia Social e do Trabalho;IP/PST;IP
+43253;Instituto de Química;IQ;IQ
+24552;Instituto de Relações Internacionais;IREL;IREL
+6274;Conselho Comunitário;CComunitário-UnB;CComunitário-UnB
+34669;Conselho Diretor;CD-UnB;CD-UnB
+6159;Conselho Universitário;CONSUNI-UnB;CONSUNI-UnB
+24262;Conselho de Administração;CA-UNB;CA-UNB
+6162;Conselho de Ensino, Pesquisa e Extensão;CEPE-UnB;CEPE-UnB

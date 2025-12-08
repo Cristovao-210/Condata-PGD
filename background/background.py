@@ -47,6 +47,20 @@ def carregar_arquivos_extrator():
                 return True
     
 
+def carregar_planilha_polare():
+    # Componente para carregar os arquivos
+    planilha = st.file_uploader(
+        "Selecione a planilha com os dados do Polare",
+        type=["xlsx"],
+        accept_multiple_files=False,
+        key="upload_planilha"
+    )
+    if planilha:
+        df_planilha_polare = pd.read_excel(planilha)
+        # st.dataframe(df_planilha_polare) # debug
+        st.session_state["planilha_polare"] = df_planilha_polare
+        
+        return True
 
 def reset_app():
     st.session_state.clear()

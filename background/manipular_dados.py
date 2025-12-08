@@ -54,6 +54,7 @@ def configurar_arquivos_extrator(arquivo, tipo_arquivo, encoding="utf-8"):
             except pd.errors.EmptyDataError:
                 st.error("Erro: o arquivo está vazio ou sem colunas legíveis.")
                 
+                
         case "dados":
             # Abrindo e tratando o conteúdo do arquivo
             try:
@@ -87,5 +88,5 @@ def gerar_tabela_dados_extrator(lista_colunas, df_dados):
         lista_tabela.append(dicionario_linha_dados.copy())
 
     df_tabela_dados_extrator = pd.DataFrame(lista_tabela)
-    st.dataframe(df_tabela_dados_extrator, hide_index=True)
+    # st.dataframe(df_tabela_dados_extrator, hide_index=True)
     return df_tabela_dados_extrator

@@ -5,16 +5,13 @@ import pandas as pd
 def validar_baixar_dados():
     
     # ABA: VALIDAÇÃO
-    st.header("2. Validar Dados")
+    st.header(" Visualizar / baixar Dados")
     
-    if "raw_file" not in st.session_state:
-        st.warning("⚠️ Nenhum arquivo foi carregado ainda. Volte para a página inicial.")
+    if "arquivo_layout" not in st.session_state and "arquivo_dados" not in st.session_state and not "planilha_polare" in st.session_state:
+        st.warning("⚠️ Os arquivos necessários ainda não foram carregados. Volte para a página de carregamento.")
     else:
-        lines = st.session_state["raw_file"].split("\n")
-        df = pd.DataFrame({"linhas": lines})
-
-        st.dataframe(df)
-
-        df_html = df.to_html(index=False)
-
-        return {'dados': df, 'dados_formatados': True}
+        # Retornando dados da sessão
+        _planilha = st.session_state["planilha_polare"]
+        _layout = st.session_state["arquivo_layout"]
+        _dados = st.session_state["arquivo_dados"]
+        return {'dados_polare': _planilha,  "layout_extrator": _layout, "dados_extrator": _dados, 'dados_carregados': True}

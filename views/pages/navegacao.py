@@ -14,12 +14,12 @@ def barra_navegacao():
     # Barra de navegação horizontal (abas)
     # =======================================
     with st.container():
-        col1, col2 = st.columns([1, 1])
+        col1, col2, col3 = st.columns([1, 1, 1])
 
         with col1:
             # Aba Upload
             if st.button(
-                "📁 Upload",
+                "📁 Carregar dados",
                 use_container_width=True,
                 type=("primary" if st.session_state.active_tab == "Upload" else "secondary")
             ):
@@ -27,20 +27,30 @@ def barra_navegacao():
                 st.rerun()
 
         with col2:
-            # Aba Validação
+            # Aba Validação/visualização
             if st.button(
-                "📊 Validação",
+                "📄 Visualizar dados",
                 use_container_width=True,
                 type=("primary" if st.session_state.active_tab == "Validação" else "secondary")
             ):
                 st.session_state.active_tab = "Validação"
+                st.rerun()
+                
+        with col3:
+            # Aba Relatorios
+            if st.button(
+                "📊 Relatórios",
+                use_container_width=True,
+                type=("primary" if st.session_state.active_tab == "Relatórios" else "secondary")
+            ):
+                st.session_state.active_tab = "Relatórios"
                 st.rerun()
 
     st.markdown("---")
     return st.session_state.active_tab
 
 
-def btn_navegacao(estado, destino, label, cor_btn, recarregar=False): # "Prosseguir ➜" "⬅ Voltar"
+def btn_navegacao(estado, destino, label, cor_btn, recarregar=False, resetar=False): # "Prosseguir ➜" "⬅ Voltar"
     # Separar por colunas para centralizar o botão
     col1, col2, col3 = st.columns([0.5, 0.8, 0.1])                
     
@@ -53,7 +63,11 @@ def btn_navegacao(estado, destino, label, cor_btn, recarregar=False): # "Prosseg
             with st.spinner("Processando solicitação..."):
                 time.sleep(3)
                 st.session_state[estado] = destino
-                if recarregar:
+                if resetar:
+                    st.session_state.clear()
+                    st.cache_data.clear()
+                    st.cache_resource.clear()  
+                if recarregar: 
                     st.rerun()
 
     with col3:
