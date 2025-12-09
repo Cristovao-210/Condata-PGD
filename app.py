@@ -52,6 +52,7 @@ match aba_ativa:
                     navegacao.compontente_downoload_dados(background, df_pgd_polare, estilos.estilo_tabela_download())
                     # navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)
                 except:
+                    
                     navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)
                     
     case "Relatórios":
