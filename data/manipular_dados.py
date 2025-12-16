@@ -201,3 +201,58 @@ def conferir_cadastro_servidores_POLARE(df_pgd_final, df_polare_lista_servidores
     # Resetando o indice do DataFrame
     df_pgd_polare = df_pgd_final.reset_index(drop=True)
     return df_pgd_polare
+
+# Verificar se os arquivos carregados são os necessários
+def validar_colunas_dados(colunas_carregadas, fonte):
+    match fonte:
+        case "siape":
+            colunas_esperadas = ["GR-MATRICULA",
+                                "IT-NO-SERVIDOR",
+                                "IT-CO-SITUACAO-SERVIDOR",
+                                "IT-CO-GRUPO-OCOR-EXCLUSAO",
+                                "IT-CO-GRUPO-CARGO-EMPREGO",
+                                "IT-CO-CARGO-EMPREGO",
+                                "IT-CO-UORG-LOTACAO-SERVIDOR",
+                                "IT-CO-TIPO-PGD",
+                                "IT-IN-PGD"]
+            for indice, coluna_esperada in enumerate(colunas_esperadas):
+                if coluna_esperada not in colunas_carregadas[indice]["nome_coluna"]:
+                    st.error("O Layout do arquivo não está de acordo com o esperado!")
+                    st.write("Colunas Esperadas")
+                    st.table(colunas_esperadas)
+                    st.write("Colunas do arquivo carregado:")
+                    st.table(colunas_carregadas)
+                    return
+            else:
+                # st.success("Layout dos dados do PGD: OK!", level="success")
+                pass
+        
+        case "polare":
+            print("chegou aqui...")
+            
+            colunas_esperadas = ["id",
+                                    "ativo",
+                                    "ano_referencia",
+                                    "carga_horaria",
+                                    "modelo_trabalho",
+                                    "nome_servidor",
+                                    "nome_unidade_localizacao",
+                                    "nome_unidade_lotacao",
+                                    "situacao",
+                                    "nota_plano_individual",
+                                    "motivo_nota",
+                                    "mes_referencia_avaliacao",
+                                    "ano_referencia_avaliacao",
+                                    "nome_responsavel_avaliacao"]
+            
+            for coluna_esperada in colunas_esperadas:
+                if coluna_esperada not in colunas_carregadas:
+                    st.error("O Layout da Planilha não está de acordo com o esperado!")
+                    st.write("Colunas Esperadas")
+                    st.table(colunas_esperadas)
+                    st.write("Colunas da Planilha carregada:")
+                    st.table(colunas_carregadas)
+                    return
+            else:
+                # st.success("Layout dos dados do POLARE: OK!", level="success")
+                pass

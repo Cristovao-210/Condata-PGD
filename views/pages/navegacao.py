@@ -99,3 +99,21 @@ def compontente_downoload_dados(background, df, estilo_html):
                 limpar_navegacao()
     st.markdown("---")
         
+
+def navegacao_aba_upload():
+    # 1. Inicializar o estado da "aba" no session_state, se não existir
+    if "aba_ativa" not in st.session_state:
+        st.session_state.aba_ativa = "Dados PGD do SIAPE"
+    # Usamos a 'key' para sincronizar o valor
+    aba_selecionada = st.radio(
+        "Navegação",
+        label_visibility="hidden",
+        options=["Dados PGD do SIAPE", "Dados do PGD do Polare"],
+        key="aba_ativa",
+        horizontal=True
+    )
+    return aba_selecionada
+
+def mudar_radio_ativo(opcao):
+    if st.session_state.aba_ativa:
+        st.session_state.aba_ativa = opcao
