@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pd
+
 
 
 def carregar_arquivos(funcao_carregar_arquivos, descricao_carregamento):

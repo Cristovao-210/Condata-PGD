@@ -40,8 +40,15 @@ def carregar_uorgs_SIORG(caminho_uorgs_SIORG):
     df_uorgs_SIORG = df_uorgs_SIORG.rename(columns={"codigo": "codigo_siorg_uorg"})
     return df_uorgs_SIORG
 
+def carregar_acerto_nome_unidades_macro(caminho_acerto_nome_unidades):
+    # Carregando dados para acerto no nome das uniades e unidades macro
+    df_correcao_unidades_macro = pd.read_excel(caminho_acerto_nome_unidades)
+    df_correcao_unidades_macro = converter_colunas_str(df_correcao_unidades_macro)
+    retirar_espacos_colunas(df_correcao_unidades_macro)
+    return df_correcao_unidades_macro
+        
 
-def criar_left_join_SIAPE_SIPORG(df_uorgs_siape, df_uorgs_SIORG):
+def criar_left_join_SIAPE_SIPORG(df_uorgs_siape, df_uorgs_SIORG, df_correcao_unidades_macro):
     # Criando tabela de UORGS (Com e sem correspondência)
     df_SIAPE_left_join_SIORG = pd.merge(df_uorgs_siape, df_uorgs_SIORG, on="codigo_siorg_uorg", how="left")
     df_SIAPE_left_join_SIORG = df_SIAPE_left_join_SIORG.drop(columns=["codigo_orgao", "codigo_siorg_uorg"])
@@ -60,6 +67,11 @@ def criar_left_join_SIAPE_SIPORG(df_uorgs_siape, df_uorgs_SIORG):
     df_SIAPE_left_join_SIORG.loc[filtro_unidade_macro_isna, 'unidade_macro'] = df_SIAPE_left_join_SIORG['sigla_uorg_siape']
     # Excluindo colunas com nomenclaturas vindas do SIAPE
     df_SIAPE_left_join_SIORG = df_SIAPE_left_join_SIORG.drop(columns=["nome_uorg_siape", "sigla_uorg_siape"])
+    # Fazendo o ajuste das unidades macros que foram corrigidas MANUALMENTE pela Laize
+    for  sigla, uni_macro in zip(df_correcao_unidades_macro['sigla_unidade'], df_correcao_unidades_macro['unidade_macro']):
+        for  sigla_copia, uni_macro_copia in zip(enumerate(df_SIAPE_left_join_SIORG['sigla_unidade']), enumerate(df_SIAPE_left_join_SIORG['unidade_macro'])):
+            if sigla.strip() == sigla_copia[1].strip():
+                df_SIAPE_left_join_SIORG.loc[sigla_copia[0], 'unidade_macro'] = uni_macro.strip()
     return df_SIAPE_left_join_SIORG
 
 

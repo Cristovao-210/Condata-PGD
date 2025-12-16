@@ -1,7 +1,7 @@
 from data import carregar_dados
-from views.pages import navegacao, pg_carregar_arquvio, pg_validar_dados
+from views.pages import navegacao, pg_carregar_arquvio, pg_validar_dados, pg_relatorios
 from views.style import estilos
-from background import background, manipular_dados, relatorios
+from background import background, manipular_dados
 import streamlit as st 
 
 
@@ -35,7 +35,8 @@ match aba_ativa:
                     # carregar tabelas auxiliares
                     df_uorgs_siape = carregar_dados.carregar_uorgs_siape(caminho_uorgs_siape="data/UORGS-SIAPE.csv")
                     df_uorgs_SIORG = carregar_dados.carregar_uorgs_SIORG(caminho_uorgs_SIORG="data/UORGS-SIORG.csv")
-                    df_SIAPE_left_join_SIORG = carregar_dados.criar_left_join_SIAPE_SIPORG(df_uorgs_siape=df_uorgs_siape, df_uorgs_SIORG=df_uorgs_SIORG)
+                    df_correcao_unidades_macro = carregar_dados.carregar_acerto_nome_unidades_macro(caminho_acerto_nome_unidades="data/correcao_unidades_macro.xlsx")
+                    df_SIAPE_left_join_SIORG = carregar_dados.criar_left_join_SIAPE_SIPORG(df_uorgs_siape=df_uorgs_siape, df_uorgs_SIORG=df_uorgs_SIORG, df_correcao_unidades_macro=df_correcao_unidades_macro)
                     
                     # Tratar nome das uorgs
                     df_pgd_final = carregar_dados.anexar_uorgs_tabela_PGD(df_pgd_unb=df_dados_EXTRATOR, df_SIAPE_left_join_SIORG=df_SIAPE_left_join_SIORG)
@@ -56,5 +57,5 @@ match aba_ativa:
                     navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)
                     
     case "Relatórios":
-        relatorios.gerar_relatorio()
+        pg_relatorios.gerar_relatorio()
 
