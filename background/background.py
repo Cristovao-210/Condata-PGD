@@ -43,7 +43,7 @@ def carregar_arquivos_extrator():
                 st.success("✔️ Arquivos carregados com sucesso!")
                 st.session_state["arquivo_layout"] = arquivo_layout
                 st.session_state["arquivo_dados"] = arquivo_dados
-                print(arquivo_dados.name,"\n",arquivo_layout.name) # Debug
+                # print(arquivo_dados.name,"\n",arquivo_layout.name) # Debug
                 return True
     
 

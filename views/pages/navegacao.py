@@ -49,6 +49,10 @@ def barra_navegacao():
     st.markdown("---")
     return st.session_state.active_tab
 
+def limpar_navegacao():
+    st.session_state.clear()
+    st.cache_data.clear()
+    st.cache_resource.clear()  
 
 def btn_navegacao(estado, destino, label, cor_btn, recarregar=False, resetar=False): # "Prosseguir ➜" "⬅ Voltar"
     # Separar por colunas para centralizar o botão
@@ -64,9 +68,7 @@ def btn_navegacao(estado, destino, label, cor_btn, recarregar=False, resetar=Fal
                 time.sleep(3)
                 st.session_state[estado] = destino
                 if resetar:
-                    st.session_state.clear()
-                    st.cache_data.clear()
-                    st.cache_resource.clear()  
+                    limpar_navegacao()                    
                 if recarregar: 
                     st.rerun()
 
@@ -82,14 +84,18 @@ def compontente_downoload_dados(background, df, estilo_html):
 
         with col1:
                 background.baixar_df(df, "csv", "")
+                limpar_navegacao()  
 
         with col2:
                 background.baixar_df(df, "json", "")
+                limpar_navegacao()
 
         with col3:
                 background.baixar_df(df, "xlsx", "")
+                limpar_navegacao()
 
         with col4:
                 background.baixar_df(df, "html", estilo_html)
+                limpar_navegacao()
     st.markdown("---")
         
