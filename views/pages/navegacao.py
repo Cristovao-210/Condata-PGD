@@ -46,7 +46,7 @@ def barra_navegacao():
                 st.session_state.active_tab = "Relatórios"
                 st.rerun()
 
-    st.markdown("---")
+    st.markdown("<hr>", unsafe_allow_html=True)
     return st.session_state.active_tab
 
 def limpar_navegacao():
@@ -78,7 +78,7 @@ def btn_navegacao(estado, destino, label, cor_btn, recarregar=False, resetar=Fal
 
 def compontente_downoload_dados(background, df, estilo_html):
 
-    with st.expander("📥 Escolha o formato para download", True):
+    with st.expander("📥 Escolha o formato para download", False):
         # Criar 4 colunas para alinhar os botões
         col1, col2, col3, col4 = st.columns(4)
 
@@ -97,7 +97,7 @@ def compontente_downoload_dados(background, df, estilo_html):
         with col4:
                 background.baixar_df(df, "html", estilo_html)
                 limpar_navegacao()
-    st.markdown("---")
+    # st.markdown("---")
         
 
 def navegacao_aba_upload():

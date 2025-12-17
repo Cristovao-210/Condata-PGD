@@ -59,7 +59,7 @@ def carregar_planilha_polare():
         df_planilha_polare = pd.read_excel(planilha)
         # st.dataframe(df_planilha_polare) # debug
         st.session_state["planilha_polare"] = df_planilha_polare
-        
+        st.success("✔️ Planilha Carregada com sucesso!")
         return True
 
 def reset_app():

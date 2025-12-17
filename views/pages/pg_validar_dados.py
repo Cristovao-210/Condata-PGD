@@ -5,7 +5,7 @@ import pandas as pd
 def validar_baixar_dados():
     
     # ABA: VALIDAÇÃO
-    st.header(" Visualizar / baixar Dados")
+    st.subheader(" Visualizar / baixar Dados")
     
     if "arquivo_layout" not in st.session_state and "arquivo_dados" not in st.session_state and not "planilha_polare" in st.session_state:
         st.warning("⚠️ Os arquivos necessários ainda não foram carregados. Volte para a página de carregamento.")

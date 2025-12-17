@@ -13,7 +13,7 @@ def carregar_arquivos(funcao_carregar_arquivos, descricao_carregamento):
     
     # ABA: UPLOAD
     if st.session_state.active_tab == "Upload":
-        st.header(descricao_carregamento)
+        st.subheader(descricao_carregamento)
 
         # RECEBE POR PARÂMETRO A FUNÇÃO QUE CARREGA OS ARQUIVOS NA SESSÃO
         carga_arquivos_efetuada = funcao_carregar_arquivos()

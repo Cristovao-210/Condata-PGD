@@ -1,7 +1,7 @@
 import gzip
 import pandas as pd
 import streamlit as st
-from data.funcoes_auxiliares import *
+from data._funcoes_auxiliares import *
 
 # Gerar DataFrame com o conteúdo dos arquivos
 def carregar_linhas_para_df(caminho_arquivo, nome_coluna="linha", encoding="utf-8"):
@@ -63,7 +63,7 @@ def configurar_arquivos_extrator(arquivo, tipo_arquivo, encoding="utf-8"):
                 if df_dados.empty:
                     st.warning("Arquivo de Dados lido, mas está vazio.")
                 else:
-                    print("Gerando arquivo com dados extraídos...")
+                    # print("Gerando arquivo com dados extraídos...")
                     return df_dados
             except pd.errors.EmptyDataError:
                 print("Erro: o arquivo está vazio ou sem colunas legíveis.")
@@ -227,9 +227,7 @@ def validar_colunas_dados(colunas_carregadas, fonte):
                 # st.success("Layout dos dados do PGD: OK!", level="success")
                 pass
         
-        case "polare":
-            print("chegou aqui...")
-            
+        case "polare":            
             colunas_esperadas = ["id",
                                     "ativo",
                                     "ano_referencia",

@@ -1,5 +1,5 @@
 import pandas as pd 
-from data.funcoes_auxiliares import *
+from data._funcoes_auxiliares import *
 
 
 def carregar_uorgs_siape(caminho_uorgs_siape):

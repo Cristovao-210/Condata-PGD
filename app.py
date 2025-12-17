@@ -23,7 +23,7 @@ match aba_ativa:
             if arquivo_carregado or mostrar_msg_alerta:
                 with tab_polare:
                     if mostrar_msg_alerta:
-                        st.warning("Primeiro carrege os dados do PGD vindos do SIAPE.")
+                        st.warning("⚠️ Primeiro carrege os dados do PGD vindos do SIAPE.")
                     else:
                         planilha_cerregada = pg_carregar_arquvio.carregar_arquivos(funcao_carregar_arquivos=background.carregar_planilha_polare, 
                                                                             descricao_carregamento="2. Carregar dados do Polare")
@@ -43,9 +43,9 @@ match aba_ativa:
                     manipular_dados.validar_colunas_dados(lista_colunas, "siape")
                     df_dados_EXTRATOR = manipular_dados.configurar_dados_arquivo_EXTRATOR(df_pgd_unb=df_dados_EXTRATOR)
                     # carregar tabelas auxiliares
-                    df_uorgs_siape = carregar_dados.carregar_uorgs_siape(caminho_uorgs_siape="data/UORGS-SIAPE.csv")
-                    df_uorgs_SIORG = carregar_dados.carregar_uorgs_SIORG(caminho_uorgs_SIORG="data/UORGS-SIORG.csv")
-                    df_correcao_unidades_macro = carregar_dados.carregar_acerto_nome_unidades_macro(caminho_acerto_nome_unidades="data/correcao_unidades_macro.xlsx")
+                    df_uorgs_siape = carregar_dados.carregar_uorgs_siape(caminho_uorgs_siape="data/data_files/UORGS-SIAPE.csv")
+                    df_uorgs_SIORG = carregar_dados.carregar_uorgs_SIORG(caminho_uorgs_SIORG="data/data_files/UORGS-SIORG.csv")
+                    df_correcao_unidades_macro = carregar_dados.carregar_acerto_nome_unidades_macro(caminho_acerto_nome_unidades="data/data_files/correcao_unidades_macro.xlsx")
                     df_SIAPE_left_join_SIORG = manipular_dados.criar_left_join_SIAPE_SIPORG(df_uorgs_siape=df_uorgs_siape, df_uorgs_SIORG=df_uorgs_SIORG, df_correcao_unidades_macro=df_correcao_unidades_macro)
                     # Tratar nome das uorgs
                     df_pgd_final = manipular_dados.anexar_uorgs_tabela_PGD(df_pgd_unb=df_dados_EXTRATOR, df_SIAPE_left_join_SIORG=df_SIAPE_left_join_SIORG)
@@ -56,10 +56,11 @@ match aba_ativa:
                     
                     # Consolidar dados do SIAPE com tabela do POLARE
                     df_pgd_polare = manipular_dados.conferir_cadastro_servidores_POLARE(df_pgd_final=df_pgd_final, df_polare_lista_servidores=df_polare_lista_servidores)
-                    # Exibir dados consolidadeos
-                    st.dataframe(df_pgd_polare)
                     # Opções de download                    
                     navegacao.compontente_downoload_dados(background, df_pgd_polare, estilos.estilo_tabela_download())
+                    # Exibir dados consolidadeos
+                    st.dataframe(df_pgd_polare)
+                    
                     # navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)
                 except:
                     navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)
