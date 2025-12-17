@@ -1,5 +1,5 @@
 from data import carregar_dados, manipular_dados
-from views.pages import navegacao, pg_carregar_arquvio, pg_validar_dados, pg_relatorios
+from views.pages import navegacao, pg_carregar_arquvio, pg_mostrar_relatorios, pg_validar_dados
 from views.style import estilos
 from background import background
 import streamlit as st 
@@ -66,5 +66,5 @@ match aba_ativa:
                     navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)
                     
     case "Relatórios":
-        pg_relatorios.gerar_relatorio()
+        pg_mostrar_relatorios.gerar_relatorio()
 
