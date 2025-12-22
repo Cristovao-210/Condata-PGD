@@ -114,7 +114,18 @@ def baixar_df(df: pd.DataFrame, formato: str, estilo_html: str):
     except:
         st.error("Erro no Download do arquivo... Refaça a operação.")
 
+def baixar_macros_siape(caminho_arquivo_macro, nome_macro):
+    with open(caminho_arquivo_macro, "rb") as f:
+        conteudo = f.read()
 
+    st.download_button(
+        label="📥 Baixar Macro",
+        data=conteudo,
+        file_name=nome_macro,
+        mime="text/plain",
+        use_container_width=True
+    )
+    
 def buscar_emojis():
     return {
         "informatica": [

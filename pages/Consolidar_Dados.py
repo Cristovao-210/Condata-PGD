@@ -5,6 +5,7 @@ from background import background
 import streamlit as st 
 
 # Iniciar navegacao
+st.set_page_config(page_title="Consolidar Dados", page_icon="🔄")
 aba_ativa = navegacao.barra_navegacao()
 
 # Validar opções de navegacao
@@ -53,14 +54,12 @@ match aba_ativa:
                     df_planilha_polare = dados['dados_polare']
                     manipular_dados.validar_colunas_dados(list(df_planilha_polare), "polare")
                     df_polare_lista_servidores = manipular_dados.aplicar_filtros_planilha_POLARE(caminho_planilha_polare=df_planilha_polare)
-                    
                     # Consolidar dados do SIAPE com tabela do POLARE
                     df_pgd_polare = manipular_dados.conferir_cadastro_servidores_POLARE(df_pgd_final=df_pgd_final, df_polare_lista_servidores=df_polare_lista_servidores)
                     # Opções de download                    
                     navegacao.compontente_downoload_dados(background, df_pgd_polare, estilos.estilo_tabela_download())
                     # Exibir dados consolidadeos
                     st.dataframe(df_pgd_polare)
-                    
                     # navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)
                 except:
                     navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)

@@ -49,6 +49,13 @@ def barra_navegacao():
     st.markdown("<hr>", unsafe_allow_html=True)
     return st.session_state.active_tab
 
+def centralizar_texto(txt):
+    st.markdown(f"""<p style="text-align: center;">{txt}</p>""", unsafe_allow_html=True)
+
+def centralizar_titulo(titulo):
+    st.markdown(f"""<h3 style="font-weight: bold; text-align: center;">{titulo}</h3>""", unsafe_allow_html=True)
+    
+
 def limpar_navegacao():
     st.session_state.clear()
     st.cache_data.clear()
