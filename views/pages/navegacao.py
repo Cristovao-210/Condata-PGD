@@ -107,20 +107,15 @@ def compontente_downoload_dados(background, df, estilo_html):
     # st.markdown("---")
         
 
-def navegacao_aba_upload():
-    # 1. Inicializar o estado da "aba" no session_state, se não existir
-    if "aba_ativa" not in st.session_state:
-        st.session_state.aba_ativa = "Dados PGD do SIAPE"
-    # Usamos a 'key' para sincronizar o valor
-    aba_selecionada = st.radio(
-        "Navegação",
-        label_visibility="hidden",
-        options=["Dados PGD do SIAPE", "Dados do PGD do Polare"],
-        key="aba_ativa",
-        horizontal=True
-    )
-    return aba_selecionada
-
-def mudar_radio_ativo(opcao):
-    if st.session_state.aba_ativa:
-        st.session_state.aba_ativa = opcao
+def btn_switch_paginas_app(label_btn, pagina_destino):
+    
+    st.markdown("---")
+    col_1_btn, col_2_btn, col_3_btn = st.columns(3)
+    with col_1_btn:
+        pass
+    with col_2_btn:
+        if st.button(f"{label_btn}", type="primary"):
+            st.switch_page(f"{pagina_destino}")
+    with col_3_btn:
+        pass
+    st.markdown("---")

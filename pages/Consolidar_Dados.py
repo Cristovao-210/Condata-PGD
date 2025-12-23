@@ -18,6 +18,8 @@ match aba_ativa:
             with tab_siape:
                 arquivo_carregado = pg_carregar_arquvio.carregar_arquivos(funcao_carregar_arquivos=background.carregar_arquivos_extrator, 
                                                             descricao_carregamento="1. Carregar dados do PGD")
+                
+                # navegacao.btn_switch_paginas_app(label_btn="<- Página Inicial", pagina_destino="Pagina_Inicial.py")
                 if arquivo_carregado:
                     mostrar_msg_alerta = False
                     st.info(":information_source: Selecione a aba Dados do Polare. ➜")
@@ -65,5 +67,6 @@ match aba_ativa:
                     navegacao.btn_navegacao("active_tab", "Upload", "⬅ Carregar novos arquivos","primary", True, True)
                     
     case "Relatórios":
+        st.info(":information_source: PÁGINA EM CONSTRUÇÃO...")
         pg_mostrar_relatorios.gerar_relatorio()
 

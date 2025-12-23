@@ -215,18 +215,21 @@ def validar_colunas_dados(colunas_carregadas, fonte):
                                 "IT-CO-UORG-LOTACAO-SERVIDOR",
                                 "IT-CO-TIPO-PGD",
                                 "IT-IN-PGD"]
-            for indice, coluna_esperada in enumerate(colunas_esperadas):
-                if coluna_esperada not in colunas_carregadas[indice]["nome_coluna"]:
-                    st.error("O Layout do arquivo não está de acordo com o esperado!")
-                    st.write("Colunas Esperadas")
-                    st.table(colunas_esperadas)
-                    st.write("Colunas do arquivo carregado:")
-                    st.table(colunas_carregadas)
-                    return
+            if colunas_carregadas:
+                for indice, coluna_esperada in enumerate(colunas_esperadas):
+                    if coluna_esperada not in colunas_carregadas[indice]["nome_coluna"]:
+                        st.error("O Layout do arquivo não está de acordo com o esperado!")
+                        st.write("Colunas Esperadas")
+                        st.table(colunas_esperadas)
+                        st.write("Colunas do arquivo carregado:")
+                        st.table(colunas_carregadas)
+                        return
+                else:
+                    # st.success("Layout dos dados do PGD: OK!", level="success")
+                    pass
             else:
-                # st.success("Layout dos dados do PGD: OK!", level="success")
-                pass
-        
+                return colunas_esperadas        
+            
         case "polare":            
             colunas_esperadas = ["id",
                                     "ativo",
@@ -242,15 +245,17 @@ def validar_colunas_dados(colunas_carregadas, fonte):
                                     "mes_referencia_avaliacao",
                                     "ano_referencia_avaliacao",
                                     "nome_responsavel_avaliacao"]
-            
-            for coluna_esperada in colunas_esperadas:
-                if coluna_esperada not in colunas_carregadas:
-                    st.error("O Layout da Planilha não está de acordo com o esperado!")
-                    st.write("Colunas Esperadas")
-                    st.table(colunas_esperadas)
-                    st.write("Colunas da Planilha carregada:")
-                    st.table(colunas_carregadas)
-                    return
+            if colunas_carregadas:
+                for coluna_esperada in colunas_esperadas:
+                    if coluna_esperada not in colunas_carregadas:
+                        st.error("O Layout da Planilha não está de acordo com o esperado!")
+                        st.write("Colunas Esperadas")
+                        st.table(colunas_esperadas)
+                        st.write("Colunas da Planilha carregada:")
+                        st.table(colunas_carregadas)
+                        return
+                else:
+                    # st.success("Layout dos dados do POLARE: OK!", level="success")
+                    pass
             else:
-                # st.success("Layout dos dados do POLARE: OK!", level="success")
-                pass
+                return colunas_esperadas

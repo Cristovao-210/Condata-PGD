@@ -125,6 +125,11 @@ def baixar_macros_siape(caminho_arquivo_macro, nome_macro):
         mime="text/plain",
         use_container_width=True
     )
+
+def mostrar_video_tutorial(titutlo_video, url_video):
+    with st.expander(titutlo_video, False):
+        st.video(url_video)
+    
     
 def buscar_emojis():
     return {
