@@ -185,9 +185,9 @@ def aplicar_filtros_planilha_POLARE(caminho_planilha_polare):
     retirar_espacos_colunas(df_polare)
     # filtros a serem utilizados
     # Coluna "ano_referencia": 2025
-    filtro_ano_referencia = (df_polare["ano_referencia"] == "2026")
+    filtro_ano_referencia = (df_polare["ano_referencia"] == "2026") | (df_polare["ano_referencia"] == "2.026")
     # Coluna "ativo": VERDADEIRO
-    filtro_coluna_ativo = (df_polare["ativo"] == "true")
+    filtro_coluna_ativo = (df_polare["ativo"] == "True")
     # Coluna "situacao": ['HOMOLOGADO', 'PENDENTE_HOMOLOGACAO','CADASTRADO', 'NECESSITA_CORRECAO'] df_polare['situacao'].unique()
     filtro_coluna_situacao = (df_polare['situacao'] != 'FINALIZADO')
     # DataFrame filtrado
